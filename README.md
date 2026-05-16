@@ -2,6 +2,7 @@
 
 Project scaffolded with the following structure:
 
+```text
 PDA_OOP_project /
 ├── src/
 │   ├── Task.h / Task.cpp
@@ -26,5 +27,5 @@ PDA_OOP_project /
 │   └── sample_reminders.txt
 │
 └── Makefile
-
+```
 Use `make` to build the placeholder executable.
