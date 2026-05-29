@@ -7,8 +7,8 @@ PDA_OOP_project /
 │   ├── Task.h / Task.cpp
 │   ├── Reminder.h / Reminder.cpp
 │   ├── Note.h / Note.cpp
-│   ├── Storage.h / Storage.cpp
-│   ├── Scheduler.h / Scheduler.cpp
+│   ├── PDA.h / PDA.cpp
+│   ├── PDAItems.h / PDAItems.cpp
 │   └── main.cpp
 │
 ├── data/
@@ -23,6 +23,7 @@ PDA_OOP_project /
 │
 ├── sample_data/
 │   ├── sample_tasks.txt
+│   ├── sample_note.txt
 │   └── sample_reminders.txt
 │
 └── Makefile
