@@ -1,28 +1,35 @@
-#include <iostream>
-#include <string>
 #include "PDAItem.h"
+#include <iostream>
 
-PDAItem::PDAItem(int id, const std::string& title){
-    // Constructor implementation
-    setId(id);
-    setTitle(title);
+// Constructor
+PDAItem::PDAItem(int id, const std::string& title) {
+    this->id = id;
+    this->title = title;
 }
 
+// Destructor
+PDAItem::~PDAItem() {}
+
+// Returns id
 int PDAItem::getId()const {
     return id;
 }
 
+// Returns title
 std::string PDAItem::getTitle()const {
     return title;
 }
 
-void PDAItem::setId(int id){
-    if (id > 0){
-        this->id = id;}
+// Sets id
+void PDAItem::setId(int id) {
+    this->id = id;
 }
 
-void PDAItem::setTitle(const std::string& title){
-    if (title.length() > 0){
-        this->title = title;
-    }
+// Sets title - rejects empty string
+void PDAItem::setTitle(const std::string &title) {
+    if (title.empty()) {
+        std::cout << "Error: title cannot be empty." << std::endl;
+        return;
+        }
+    this->title = title;
 }
