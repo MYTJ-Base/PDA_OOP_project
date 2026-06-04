@@ -39,6 +39,8 @@ public:
     void display() const override;
     void saveToFile(std::ofstream& file) const override;
     void loadFromFile(std::ifstream& file) override;
+    std::string getType() const override;
+
 };
 
 #endif // TASK_H

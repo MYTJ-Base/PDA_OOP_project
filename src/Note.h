@@ -12,7 +12,8 @@ private:
     std::string creationDate; // Format: YYYY-MM-DD, set automatically on creation
 
 public:
-    // Constructor
+    // Constructors
+    Note(); //Default constructor
     Note(int id,
          const std::string& title,
          const std::string& content,
@@ -31,6 +32,7 @@ public:
     void display() const override;
     void saveToFile(std::ofstream& file) const override;
     void loadFromFile(std::ifstream& file) override;
+    std::string getType() const override;
 };
 
 #endif // NOTE_H

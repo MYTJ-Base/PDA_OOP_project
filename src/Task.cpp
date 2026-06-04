@@ -94,3 +94,7 @@ void Task::loadFromFile(ifstream& file) {
         this->completed = (completedStr == "1");
     }
 }
+
+std::string Task::getType()const{
+    return "task";
+}
