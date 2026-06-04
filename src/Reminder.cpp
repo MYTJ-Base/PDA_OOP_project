@@ -100,3 +100,7 @@ void Reminder::loadFromFile(ifstream& file) {
     message = messageStr;
     alarm = (alarmStr == "1");
 }
+
+std::string Reminder::getType()const{
+    return "reminder";    
+}

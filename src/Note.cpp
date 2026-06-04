@@ -6,6 +6,9 @@
 // Constructor
 // Calls PDAItem parent constructor with id and title,
 // then initialises content and creationDate.
+
+Note::Note(): PDAItem(0, "Hello"), content("This is a default note"), creationDate(""){}
+
 Note::Note(int id, const std::string& title, const std::string& content, const std::string& creationDate)
 : PDAItem(id, title){
     setContent(content);
@@ -49,13 +52,10 @@ void Note::display() const {
 // Writes one pipe-delimited line to the output file:
 // ID|Title|CreationDate|Content
 void Note::saveToFile(std::ofstream& file) const {
-    file << getId()
-    << getTitle()
-    << "|"
-    << "|"
-    << creationDate << "|"
-    << content
-    << "\n";
+    file << getId() << "|"
+         << getTitle() << "|"
+         << creationDate << "|"
+         << content << "\n";
 }
 
 // Reads one pipe-delimited line from the input file and
@@ -75,3 +75,8 @@ void Note::loadFromFile(std::ifstream& file) {
     creationDate = dateStr;
     content = contentStr;
 }
+
+std::string Note::getType()const{
+    return "note";    
+}
+
