@@ -33,6 +33,11 @@ install(TARGETS pda_lib pda_app
     INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
 
+# Copy data directory for a "ready-to-run" experience
+install(DIRECTORY data/ DESTINATION ${CMAKE_INSTALL_BINDIR}/data)
+# Also copy sample_data as a fallback/example
+install(DIRECTORY sample_data/ DESTINATION ${CMAKE_INSTALL_BINDIR}/sample_data)
+
 install(FILES 
     src/Note.h
     src/PDA.h
